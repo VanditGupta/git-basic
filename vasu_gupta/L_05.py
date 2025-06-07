@@ -11,7 +11,9 @@ colors=['pink','blue','green','red','orange']
 clustors={}
 
 for ix in range(k):
-    center=10.0*(2*np.random.random((X.shape[0],)) -1)
+    # each center should be the same dimension as our data points
+    # X.shape[1] gives us the number of features
+    center=10.0*(2*np.random.random((X.shape[1],)) -1)
     points=[]
 
     clustor={
